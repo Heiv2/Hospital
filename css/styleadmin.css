@@ -1,0 +1,13 @@
+
+  .sidebar {
+    height: 100vh;
+    background-color: #e3f2fd;
+    border-top: 2px solid #596e8e; 
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.9);
+}
+
+
+

@@ -5,10 +5,9 @@
 }
 body{
     background-color: #EEF5FC;
+    
 }
-h1 {
-    color: aqua;
-}
+
 
 .row {
     display: flex;
@@ -32,3 +31,6 @@ h1 {
 .form-group{
     width: 1000px;
 }
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.9);
+}   
