@@ -37,3 +37,4 @@ $result = $connection->query("CALL GetAllPeople()");
         <?php endwhile; ?>
     </table>
 </div>
+<?php include '../partials/footer.php';?>

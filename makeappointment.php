@@ -53,3 +53,4 @@ unset($_SESSION['appointment-data']);
         </div>
     </form>
 </div>
+<?php include './partials/footer.php';?>

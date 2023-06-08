@@ -50,3 +50,4 @@ $apps = mysqli_query($connection,$query);
     </tbody>
   </table>
 </main>
+<?php include '../partials/footer.php';?>

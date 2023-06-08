@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Dynamic Footer</title>
+    <style>
+        /* CSS kodu */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    
-<script src="../js/main.js"></script>
+    <footer id="myFooter">Copyright &copy; <span id="year"></span> City Hospital</footer>
+
+    <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

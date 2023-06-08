@@ -36,7 +36,7 @@ $result = mysqli_query($connection, $query);
                 <td><?= $row['user_id'] ?></td>
                 <td><?= $row['FirstName'] ?></td>
                 <td><?= $row['LastName'] ?></td>
-                <td><?= $row['city'] ?></td>
+                <td><?= $row['City'] ?></td>
                 <td><?= $row['date'] ?></td>
                 <td><?= $row['docname'] ?></td>
                 <td><?= $row['deleted_at'] ?></td>
@@ -44,3 +44,4 @@ $result = mysqli_query($connection, $query);
         <?php endwhile; ?>
     </table>
 </div>
+<?php include '../partials/footer.php';?>

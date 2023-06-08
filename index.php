@@ -1,4 +1,5 @@
 <?php include 'partials/header.php';
+
 if (!isset($_SESSION['user-id'])) {
     header('location:' . ROOT_URL . 'SignIn.php');
     die();
@@ -23,3 +24,4 @@ if (!isset($_SESSION['user-id'])) {
         </div>
     </div>
 </div>
+<?php include './partials/footer.php';?>

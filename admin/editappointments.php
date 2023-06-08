@@ -51,3 +51,4 @@ if (isset($_GET['id'])) {
         <button type="submit" name="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
+<?php include '../partials/footer.php';?>
