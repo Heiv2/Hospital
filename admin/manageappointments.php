@@ -28,7 +28,9 @@ $apps = mysqli_query($connection,$query);
         <th>City</th>
         <th>date</th>
         <th>docname</th>
-      </tr>
+        <th></th>
+        <th></th>
+      </tr> 
     </thead>
     <tbody>
       <?php while($ap = mysqli_fetch_assoc($apps)): ?>

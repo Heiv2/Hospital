@@ -1,9 +1,5 @@
 
-  .sidebar {
-    height: 100vh;
-    background-color: #e3f2fd;
-    border-top: 2px solid #596e8e; 
-  }
+ 
   
   .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0,.9);
@@ -11,3 +7,106 @@
 
 
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+h2 {
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.sidebar .list-group-item {
+  border: none;
+  border-bottom:2px solid #a0b8f0;
+  color: #001b58
+}
+
+.sidebar .list-group-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar .list-group-item:hover {
+  background-color: #8ac2fb;
+}
+
+.hello {
+  margin-top: 40px;
+  text-align: center;
+  color: #001b58
+}
+.panel{
+  text-align: center;
+  color: #001b58
+}
+
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #888;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(-45deg);
+}

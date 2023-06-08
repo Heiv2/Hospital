@@ -49,7 +49,7 @@ unset($_SESSION['appointment-data']);
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" name="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">submit</button>
+            <button type="submit" name="submit" class="btn btn-block gradient-custom-4 text-body submit-btn">Submit</button>
         </div>
     </form>
 </div>

@@ -21,7 +21,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light justify-content-center" style=background-color:#e3f2fd;>
-    <a class="navbar-brand" href="<?= ROOT_URL ?>">City Hospital</a>
+    <a class="navbar-brand navbar-title"   href="<?= ROOT_URL ?>">City Hospital</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

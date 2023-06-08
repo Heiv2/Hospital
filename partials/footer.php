@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,12 +11,14 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
         }
 
         footer {
             width: 100%;
             text-align: center;
             padding: 10px 0;
+            
         }
     </style>
 </head>

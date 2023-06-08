@@ -8,6 +8,19 @@ body{
     
 }
 
+.navbar-title{
+    color: #001b58 !important
+}
+
+.submit-btn {
+    width: 25%;
+    background-color: #5783e8;
+    border:0
+}
+
+.submit-btn:hover{
+    background-color: #678ee9
+}
 
 .row {
     display: flex;

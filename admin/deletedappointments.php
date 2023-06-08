@@ -16,7 +16,7 @@ $result = mysqli_query($connection, $query);
 
 ?>
 <div class="container">
-    <h1>Deleted Appointments</h1>
+    <h2>Deleted Appointments</h2>
     <table>
         <!-- table headers -->
         <tr>

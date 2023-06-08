@@ -15,7 +15,7 @@ $result = $connection->query("CALL GetAllPeople()");
 
 ?>
 <div class="container">
-    <h1>Appointments from Cities</h1>
+    <h2>Appointments from Cities</h2>
     <table>
         <!-- table headers -->
         <tr>
