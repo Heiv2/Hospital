@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] === false) 
 }
 ?>
 
-<link rel="stylesheet" href="">
+
 <div class="container-fluid h-100">
     <div class="row h-100">
       <!-- Sidebar -->

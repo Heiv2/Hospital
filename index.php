@@ -11,10 +11,11 @@ if (!isset($_SESSION['user-id'])) {
     }
     ?>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-            <img class="card-img-top" src="./images/indir.jpg" alt="image">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class="card mx-auto">
+                <img class="card-img-top" src="./images/indir.jpg" alt="image">
                 <div class="card-body">
                     <h5 class="card-title">Get your appointment from here</h5>
                     <p class="card-text">City Hospital offers you the best service.</p>

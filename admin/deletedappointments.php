@@ -13,35 +13,37 @@ if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] === false) 
 // deleted appointments
 $query = "SELECT * FROM appointment_log";
 $result = mysqli_query($connection, $query);
-
 ?>
+
 <div class="container">
     <h2>Deleted Appointments</h2>
-    <table>
-        <!-- table headers -->
-        <tr>
-            <th>Appointment ID</th>
-            <th>User ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>City</th>
-            <th>Date</th>
-            <th>Doctor</th>
-            <th>Deleted At</th>
-        </tr>
-        <!-- table data -->
-        <?php while($row = mysqli_fetch_assoc($result)): ?>
+    <div class="table-responsive"> <!-- Add table-responsive class here -->
+        <table class="table"> <!-- Add table class here -->
+            <!-- table headers -->
             <tr>
-                <td><?= $row['app_id'] ?></td>
-                <td><?= $row['user_id'] ?></td>
-                <td><?= $row['FirstName'] ?></td>
-                <td><?= $row['LastName'] ?></td>
-                <td><?= $row['City'] ?></td>
-                <td><?= $row['date'] ?></td>
-                <td><?= $row['docname'] ?></td>
-                <td><?= $row['deleted_at'] ?></td>
+                <th>Appointment ID</th>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>City</th>
+                <th>Date</th>
+                <th>Doctor</th>
+                <th>Deleted At</th>
             </tr>
-        <?php endwhile; ?>
-    </table>
+            <!-- table data -->
+            <?php while($row = mysqli_fetch_assoc($result)): ?>
+                <tr>
+                    <td><?= $row['app_id'] ?></td>
+                    <td><?= $row['user_id'] ?></td>
+                    <td><?= $row['FirstName'] ?></td>
+                    <td><?= $row['LastName'] ?></td>
+                    <td><?= $row['City'] ?></td>
+                    <td><?= $row['date'] ?></td>
+                    <td><?= $row['docname'] ?></td>
+                    <td><?= $row['deleted_at'] ?></td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
 </div>
 <?php include '../partials/footer.php';?>

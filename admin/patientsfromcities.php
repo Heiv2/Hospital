@@ -12,29 +12,26 @@ if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] === false) 
 
 // Calling Procedure
 $result = $connection->query("CALL GetAllPeople()");
-
 ?>
 <div class="container">
     <h2>Appointments from Cities</h2>
-    <table>
-        <!-- table headers -->
-        <tr>
-            
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>City</th>
-            
-        </tr>
-        <!-- table data -->
-        <?php while($row = $result->fetch_assoc()): ?>
+    <div class="table-responsive"> <!-- Add table-responsive class here -->
+        <table class="table"> <!-- Add table class here -->
+            <!-- table headers -->
             <tr>
-                
-                <td><?= $row['FirstName'] ?></td>
-                <td><?= $row['LastName'] ?></td>
-                <td><?= $row['city'] ?></td>
-                
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>City</th>
             </tr>
-        <?php endwhile; ?>
-    </table>
+            <!-- table data -->
+            <?php while($row = $result->fetch_assoc()): ?>
+                <tr>
+                    <td><?= $row['FirstName'] ?></td>
+                    <td><?= $row['LastName'] ?></td>
+                    <td><?= $row['city'] ?></td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
 </div>
 <?php include '../partials/footer.php';?>

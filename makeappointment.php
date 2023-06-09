@@ -12,40 +12,42 @@ $docn = $_SESSION['appointment-data']['docname'] ?? null;
 $date = $_SESSION['appointment-data']['date'] ?? null;
 unset($_SESSION['appointment-data']);
 ?>
-<?php if(isset($_SESSION['appointment'])){
-        echo "<h4>".$_SESSION['appointment']."</h4>";
-        unset($_SESSION['appointment']);
-    }
-    ?>
-<div class="container min-vh-100 justify-content-center d-flex align-items-center">
-    
+<?php if(isset($_SESSION['appointment'])): ?>
+    <div class="alert_message error">
+        <p>
+            <?= $_SESSION['appointment']; ?>
+            <?php unset($_SESSION['appointment']); ?>
+        </p>
+    </div>
+<?php endif; ?>
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
     <form action="appointment-logic.php" method="POST">
         <div class="form-row">
-            <div class="form-group col-md-6 ">
-                <label for="inputFirstName">FirstName</label>
-                <input type="text" name="firstname" value="<?=$firstn?>" class="form-control" id="inputFirstName" placeholder="FirstName">
+            <div class="form-group col-md-6">
+                <label for="inputFirstName">First Name</label>
+                <input type="text" name="firstname" value="<?= $firstn ?>" class="form-control" id="inputFirstName" placeholder="First Name">
             </div>
-            <div class="form-group col-md-6 ">
-                <label for="inputLastName">LastName</label>
-                <input type="text" name="lastname" value="<?=$lastn?>" class="form-control" id="inputFirstName" placeholder="LastName">
+            <div class="form-group col-md-6">
+                <label for="inputLastName">Last Name</label>
+                <input type="text" name="lastname" value="<?= $lastn ?>" class="form-control" id="inputLastName" placeholder="Last Name">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="inputCity">City</label>
-                <input type="text" name=cityname value="<?=$city?>" class="form-control" id="inputCity">
+                <input type="text" name="cityname" value="<?= $city ?>" class="form-control" id="inputCity" placeholder="City">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputDoctor">Doctor</label>
-                <select id="inputDoctor" name=docname   class="form-control">
-                <?php while ($row1 = mysqli_fetch_array($result2)) :; ?>
-                        <option value="<?php echo $row1[1];?>"><?php echo $row1[1];?></option>
+                <select id="inputDoctor" name="docname" class="form-control">
+                    <?php while ($row1 = mysqli_fetch_array($result2)): ?>
+                        <option value="<?php echo $row1[1]; ?>"><?php echo $row1[1]; ?></option>
                     <?php endwhile; ?>
                 </select>
             </div>
             <div class="form-group col-md-4">
                 <label for="inputDate">Date</label>
-                <input type="date" name=date value="<?= $date?>" class="form-control" id="inputDate">
+                <input type="date" name="date" value="<?=$date?>"class="form-control" id="inputDate">
             </div>
         </div>
         <div class="d-flex justify-content-center">
@@ -53,4 +55,4 @@ unset($_SESSION['appointment-data']);
         </div>
     </form>
 </div>
-<?php include './partials/footer.php';?>
+<?php include './partials/footer.php'; ?>

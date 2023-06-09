@@ -26,8 +26,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    min-height: 100vh;
+    width: 80vw;
+    min-height: 80vh;
     
 }
 .card-body{
@@ -47,3 +47,48 @@ body{
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0,.9);
 }   
+.mask {
+    height: 100%;
+    overflow-y: auto; /* vertical scroll if needed */
+}
+.alert_message_error,
+.success-message {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.alert_message_error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success-message,h4{
+    background-color: #d4edda;
+    color: #155724;
+}
+.alert_message {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.error {
+    background-color: #e2281a;
+}
+

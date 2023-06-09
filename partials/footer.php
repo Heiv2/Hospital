@@ -24,9 +24,11 @@
 </head>
 <body>
     <footer id="myFooter">Copyright &copy; <span id="year"></span> City Hospital</footer>
-
-    <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <?php if ($page = "admin") : ?>
+        <script type="text/javascript" src="../js/footer.js"></script>
+        <?php endif; ?>
+        <script type="text/javascript" src="./js/footer.js"></script>
 </body>
+  
+    
 </html>
