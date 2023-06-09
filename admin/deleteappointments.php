@@ -34,5 +34,5 @@ if(isset($_GET['id'])){
     
 }
 
-header('location:' . ROOT_URL . 'admin/manageappointments.php');
+header('location:' . ROOT_URL . 'admin/index.php');
 die();

@@ -1,6 +1,6 @@
 <?php
 $page = 'admin';
-require '../partials/header.php';
+require './config/database.php';
 if (!isset($_SESSION['user-id'])) {
     header('location:' . ROOT_URL . 'SignIn.php');
     die();
@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] === false) 
 $result = $connection->query("CALL GetAllPeople()");
 ?>
 <div class="container">
-    <h2>Appointments from Cities</h2>
+    <h2>Appointments From Cities</h2>
     <div class="table-responsive"> <!-- Add table-responsive class here -->
         <table class="table"> <!-- Add table class here -->
             <!-- table headers -->
@@ -34,4 +34,3 @@ $result = $connection->query("CALL GetAllPeople()");
         </table>
     </div>
 </div>
-<?php include '../partials/footer.php';?>

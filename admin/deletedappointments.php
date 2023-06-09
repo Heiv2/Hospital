@@ -1,6 +1,6 @@
 <?php
 $page = 'admin';
-require '../partials/header.php';
+require './config/database.php';
 if (!isset($_SESSION['user-id'])) {
     header('location:' . ROOT_URL . 'SignIn.php');
     die();
@@ -41,9 +41,8 @@ $result = mysqli_query($connection, $query);
                     <td><?= $row['date'] ?></td>
                     <td><?= $row['docname'] ?></td>
                     <td><?= $row['deleted_at'] ?></td>
-                </tr>
+                </tr>   
             <?php endwhile; ?>
         </table>
     </div>
 </div>
-<?php include '../partials/footer.php';?>

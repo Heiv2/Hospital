@@ -5,7 +5,10 @@ $password = $_SESSION['signin-data']['password'] ?? null;
 unset($_SESSION['signin-data']);
 ?>
 
-<?php if (isset($_SESSION['signup-success'])) : ?>
+
+<div class="container min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="col-lg-12 col-md-12 col-sm-12"> <!-- Here we added the col-* classes -->
+  <?php if (isset($_SESSION['signup-success'])) : ?>
   <div class="success-message">
     <p>
       <?= $_SESSION['signup-success'];
@@ -20,8 +23,6 @@ unset($_SESSION['signin-data']);
     </p>
   </div>
 <?php endif ?>
-<div class="container min-vh-100 d-flex align-items-center justify-content-center">
-  <div class="col-lg-12 col-md-12 col-sm-12"> <!-- Here we added the col-* classes -->
     <form action="<?= ROOT_URL ?>signin-logic.php" method="POST" class="mx-auto">
 
       <div class="form-group">

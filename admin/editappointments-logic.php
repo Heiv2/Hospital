@@ -19,20 +19,21 @@ if (isset($_POST['submit'])) {
 
     $update_query = "UPDATE appointments SET FirstName='$firstn', LastName='$lastn', city='$city', docname='$docn', date='$date' WHERE app_id = $app_id";
     $update_result = mysqli_query($connection, $update_query);
+    header('location:' . ROOT_URL . 'admin/index.php');
 
     if ($update_result) {
         $_SESSION['update-success'] = "The appointment has been updated successfully!";
-        header('location:' . ROOT_URL . 'admin/manageappointments.php');
+       
         exit();
     } else {
         $_SESSION['update-error'] = "Failed to update the appointment. Error: " . mysqli_error($connection);
-        header('location:' . ROOT_URL . 'admin/manageappointments.php');
+        
         exit();
     }
     
-    header('location:' . ROOT_URL . 'admin/manageappointments.php');
+    
     exit();
 } else {
-    header('location:' . ROOT_URL . 'admin/manageappointments.php');
+    header('location:' . ROOT_URL . 'admin/index.php');
     die();
 }

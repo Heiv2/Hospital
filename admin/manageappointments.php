@@ -1,6 +1,6 @@
 <?php 
   $page='admin';
-  require '../partials/header.php';
+  require './config/database.php';
   if (!isset($_SESSION['user-id'])) {
     header('location:' . ROOT_URL . 'SignIn.php');
     die();
@@ -36,16 +36,16 @@
       </thead>
       <tbody>
         <?php while($ap = mysqli_fetch_assoc($apps)): ?>
-          <tr>
+          <tr class="app-row">
             <td><?= "{$ap['id']}"?></td>
-            <td><?= "{$ap['app_id']}"?></td>
+            <td class="app-id"><?= "{$ap['app_id']}"?></td>
             <td><?= "{$ap['FirstName']}"?></td>
             <td><?= "{$ap['LastName']}"?></td>
             <td><?= "{$ap['city']}"?></td>
             <td><?= "{$ap['date']}"?></td>
             <td><?= "{$ap['docname']}"?></td>
             <td><a href="<?= ROOT_URL?>admin/editappointments.php?id=<?=$ap['app_id']?>"
-            class="btn btn-warning">Edit</a></td>
+            class="btn btn-warning" id="editbutton">Edit</a></td>
             <td><a href="<?= ROOT_URL?>admin/deleteappointments.php?id=<?=$ap['app_id']?>"
             class="btn btn-danger">Delete</a></td>
           </tr>
@@ -54,4 +54,3 @@
     </table>
   </div>
 </main>
-<?php include '../partials/footer.php';?>

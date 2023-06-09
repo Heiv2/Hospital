@@ -67,12 +67,12 @@ body{
 }
 
 .alert_message_error {
-    background-color: #f8d7da;
+    
     color: #721c24;
 }
 
 .success-message,h4{
-    background-color: #d4edda;
+    
     color: #155724;
 }
 .alert_message {
@@ -89,6 +89,11 @@ body{
 }
 
 .error {
-    background-color: #e2281a;
+    color: red;
 }
-
+.error-message{
+    color: red;
+}
+.success-message{
+    color: #155724;
+}

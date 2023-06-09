@@ -1,5 +1,5 @@
 <?php
-require '../partials/header.php';
+require './config/database.php';
 if (!isset($_SESSION['user-id'])) {
     header('location:' . ROOT_URL . 'SignIn.php');
     die();
@@ -51,4 +51,3 @@ if (isset($_GET['id'])) {
         <button type="submit" name="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
-<?php include '../partials/footer.php';?>
